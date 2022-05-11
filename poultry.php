@@ -4,51 +4,50 @@
 class Duck {
 
     public function quack() {
-           echo "Quack \n";
+           echo "Quack <br />";
     }
 
     public function fly() {
-           echo "I'm flying \n";
+           echo "I'm flying <br />";
     }
 }
 
 class Turkey {
 
     public function gobble() {
-           echo "Gobble gobble \n";
+           echo "Gobble gobble <br />";
     }
 
     public function fly() {
-    echo "I'm flying a short distance \n";
+    echo "I'm flying a short distance <br />";
     }
 }
 
 
 class TurkeyAdapter extends Duck {
 
-private $turkeyAdapter;
 
-public function __construct (Duck $turkeyAdapter) {
+public function __construct (Turkey $turkey) {
 
-$this->turkeyAdapter = $turkeyAdapter;
+$this->turkey = $turkey;
 
 }
 
-public function flightAdapt() 
+public function quack() 
 {
 
-     quack();
+       $this->turkey->gobble();
+}
 
-     for($1 = 0; $i < 5; i++) {
+public function fly() 
+{
 
-       fly();
+       for($i = 0; $i < 5; $i++) 
+       {
 
-     }
-      
-      
+       $this->turkey->fly();
 
-return
-
+       }
 }
 
 }
@@ -91,4 +90,3 @@ I'm flying a short distance
 
 
 ?>
-
