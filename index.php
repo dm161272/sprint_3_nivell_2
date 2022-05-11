@@ -20,9 +20,11 @@ function duck_interaction($duck) {
 $duck = new Duck;
 $turkey = new Turkey;
 $turkey_adapter = new TurkeyAdapter($turkey);
+
 echo "<br />The Turkey says...<br />";
 $turkey->gobble();
 $turkey->fly();
+
 echo "<br />The Duck says...<br />";
 duck_interaction($duck);
 echo "<br />The TurkeyAdapter says...<br />";
@@ -52,7 +54,6 @@ I'm flying a short distance
 I'm flying a short distance
 
 */
-
 
 
 ?>
