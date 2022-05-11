@@ -24,9 +24,32 @@ class Turkey {
 }
 
 
-class TurkeyAdapter {
+class TurkeyAdapter extends Duck {
 
+private $turkeyAdapter;
 
+public function __construct (Duck $turkeyAdapter) {
+
+$this->turkeyAdapter = $turkeyAdapter;
+
+}
+
+public function flightAdapt() 
+{
+
+     quack();
+
+     for($1 = 0; $i < 5; i++) {
+
+       fly();
+
+     }
+      
+      
+
+return
+
+}
 
 }
 
@@ -45,6 +68,23 @@ Although both classes have a fly method, turkeys can only fly in short streaks, 
  To map between the duck fly method and the turkey method, you must call the turkey fly method five times to compensate.
 
 Try your class with the following code:
+
+
+Output
+The expected output is as follows:
+The Turkey says...
+Gobble gobble
+I'm flying a short distance
+The Duck says...
+Quack
+I'm flying
+The TurkeyAdapter says...
+Gobble gobble
+I'm flying a short distance
+I'm flying a short distance
+I'm flying a short distance
+I'm flying a short distance
+I'm flying a short distance
 */
 
 
